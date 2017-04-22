@@ -1,0 +1,41 @@
+<%- contentFor('title') %>
+Signup
+
+<%- contentFor('stylesheets') %>
+<style>
+  .custom-label{
+    text-align: right;
+  }
+</style>
+
+<%- contentFor('content') %>
+<div class="card card-outline-primary">
+  <div class="card-header bg-primary card-inverse">
+    Sign Up
+  </div>
+  <div class="card-block">
+    <form action="/signup" method="post" class="form-horizontal">
+      <div class="form-group row">
+        <label for="username" class="form-control-label col-md-4 custom-label">Username:</label>
+        <div class="col-md-8">
+          <input type="text" name="username" class="form-control" placeholder="someone" />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="email" class="form-control-label col-md-4 custom-label">Email:</label>
+        <div class="col-md-8">
+          <input type="email" name="email" class="form-control" placeholder="someone@domain.com" />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="password" class="form-control-label col-md-4 custom-label">Password:</label>
+        <div class="col-md-8">
+          <input type="password" name="password" class="form-control" placeholder="Secret Password" />
+        </div>
+      </div>
+      <div class="col-md-4 offset-md-4">
+        <input type="submit" value="Sign Up" class="form-control btn btn-primary" />
+      </div>
+    </form>
+  </div>
+</div>
